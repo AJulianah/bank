@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-struct user
+struct utilisateur
 {
     char phone[50];
     char compte[50];
@@ -12,7 +12,7 @@ struct user
 
 main(int argc, char const *argv[])
 {
-    struct user usr;
+    struct utilisateur usr;
     unsigned opt;
     FILE *fp;
     char filename[50];
@@ -56,7 +56,7 @@ main(int argc, char const *argv[])
         scanf("%s", &password);
         strcpy(filename, phone);
         fp = fopen(strcat(filename, ".dat"), "r");
-        fread(&usr, sizeof(struct user), 1, fp);
+        fread(&usr, sizeof(struct utilisateur), 1, fp);
         if (!strcmp(password, usr.password))
         {
             printf("\n Les mot de passe sont les memes!");
