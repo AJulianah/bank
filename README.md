@@ -1,4 +1,5 @@
 Pour compiler le fichier, on utilise gcc:
+-----------------------------------------
 
 gcc main.c -o main
 _________________________
@@ -7,9 +8,9 @@ _________________________
 Execution:
 -------------------------
 Sur linux :
-    On rend le fichier executable \n
+    On rend le fichier executable
         chmod +x main
-    ,\n On l'execute \n
+    , On l'execute 
         ./main
 
 Sous windows:
