@@ -1,4 +1,4 @@
-Pour compiler le fichier, on utilise gcc:
+Pour compiler le fichier, on utilise gcc: https://gcc.gnu.org/onlinedocs/
 -----------------------------------------
 
 gcc main.c -o main
