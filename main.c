@@ -37,7 +37,7 @@ main(int argc, char const *argv[])
         usr.balance = 0;
         strcpy(filename, usr.phone);
         fp = fopen(strcat(filename, ".dat"), "w"); // On concatene filename avec .dat
-        fwrite(&usr, sizeof(struct user), 1, fp);
+        fwrite(&usr, sizeof(struct utilisateur), 1, fp);
         if (fwrite != NULL)
         {
             printf("\nCompte crée avec succes!");
