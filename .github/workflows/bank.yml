@@ -16,5 +16,11 @@ jobs:
     - name: Configure git
       env:
         TOKEN: ${{ secrets.mytokernaccess  }}
-      run: git clone https://$SECRET_USERNAME:$SECRET_PASSWORD@github.com/AJulianah/web_api.git
+      run: 
+        mkdir bank
+        cd bank
+        git remote add bank https://$SECRET_USERNAME:$SECRET_PASSWORD@github.com/AJulianah/web_api.git
+        git pull bank main
+        cd web_api
+        ls -all
       
