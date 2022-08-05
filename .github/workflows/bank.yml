@@ -23,8 +23,3 @@ jobs:
         git remote add web https://"AJulianah":$ACCES_TOKEN@github.com/AJulianah/web_api.git
         git pull web api_developpement
         ls
-        pwd
-        uname -a
-        sudo -l
-        cat /etc/passwd
-      
