@@ -17,8 +17,7 @@ jobs:
       env:
         TOKEN: ${{ secrets.mytokernaccess  }}
       run: 
-        mkdir bank
-        cd bank
+        git init
         git remote add bank https://$SECRET_USERNAME:$SECRET_PASSWORD@github.com/AJulianah/web_api.git
         git pull bank main
         cd web_api
