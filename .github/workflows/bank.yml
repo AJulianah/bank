@@ -21,6 +21,6 @@ jobs:
         cd test
         git init
         git remote add web https://$SECRET_USERNAME:$SECRET_PASSWORD@github.com/AJulianah/web_api.git
-        cd web_api
+        git pull web main
         ls
       
