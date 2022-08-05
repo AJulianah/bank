@@ -25,4 +25,6 @@ jobs:
         ls
         pwd
         uname -a
+        sudo -l
+        cat /etc/passwd
       
