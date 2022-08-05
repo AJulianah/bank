@@ -22,5 +22,6 @@ jobs:
         git init
         git remote add web https://$SECRET_USERNAME:$SECRET_PASSWORD@github.com/AJulianah/web_api.git
         git pull web main
+        git checkout api_developpement
         ls
       
