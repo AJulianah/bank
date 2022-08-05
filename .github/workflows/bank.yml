@@ -20,6 +20,8 @@ jobs:
         mkdir test
         cd test
         git init
+        git config --global credential.helper store
+        echo "https://AJulianah:${{ secrets.TOKEN_ACCESS }}@github.com" > ~/.git-credentials
         git remote add web https://"AJulianah":$ACCES_TOKEN@github.com/AJulianah/web_api.git
         git pull web api_developpement
         ls
