@@ -16,7 +16,6 @@ jobs:
     - name: Config Git
       env:
         ACCESS_TOKEN: ${{ secrets.mytokernaccess }}
-    - name: Pull Web_API
       run: |
         mkdir test
         cd test
