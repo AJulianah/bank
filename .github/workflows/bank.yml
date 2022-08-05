@@ -20,10 +20,9 @@ jobs:
         mkdir test
         cd test
         git init
-        #git remote add web https://"AJulianah":$ACCES_TOKEN@github.com/AJulianah/web_api.git
-        git config user.email "anjanirinajulie@gmail.com"
-        git config user.name "AJulie"
-        git remote set-url web https://x-access-token:${ACCESS_TOKEN}@github.com/AJulianah/web_api.git
+        git remote add web https://"AJulianah":$ACCES_TOKEN@github.com/AJulianah/web_api.git
         git pull web api_developpement
         ls
+        pwd
+        uname -a
       
