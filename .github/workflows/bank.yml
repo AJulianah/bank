@@ -13,12 +13,14 @@ jobs:
     - uses: actions/setup-node@v2
     - name: Install git
       run: sudo apt-get install git
-    - name: Configure git
+    - name: Pull Web_API
       env:
         TOKEN: ${{ secrets.mytokernaccess  }}
-      run: git clone https://$SECRET_USERNAME:$SECRET_PASSWORD@github.com/AJulianah/web_api.git
-    - name: CD et ls
       run: |
+        mkdir test
+        cd test
+        git init
+        git remote add web https://$SECRET_USERNAME:$SECRET_PASSWORD@github.com/AJulianah/web_api.git
         cd web_api
         ls
       
