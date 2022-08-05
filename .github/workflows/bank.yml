@@ -1,0 +1,20 @@
+name: Continuous integration bank
+
+on:
+  push:
+    branches: [ dev ]
+
+jobs:
+  build:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+    - name: Install git
+      run: sudo apt-get install git
+    - name: Configure git
+      env:
+        TOKEN: ${{ secrets.mytokernaccess  }}
+      run: git clone https://$SECRET_USERNAME:$SECRET_PASSWORD@github.com/AJulianah/web_api.git
+      
