@@ -13,6 +13,12 @@ jobs:
     - uses: actions/setup-node@v2
     - name: Install git
       run: sudo apt-get install git
+    - name: Install gcc
+      run: sudo apt-get install gcc
+    - name: Compiling and run the code
+      run: |
+        gcc main.c -o main
+        ./main
     - name: Config Git
       env:
         ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
