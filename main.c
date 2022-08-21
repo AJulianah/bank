@@ -27,7 +27,11 @@ main(int argc, char const *argv[])
     scanf("%d", &opt);
     if (opt == 1)
     {
-        system("clear");
+        #ifdef _WIN32
+            system("cls");
+        #elif __linux__
+            system("clear")
+        #endif
         printf("Entrer votre numero de compte: \t");
         scanf("%s", usr.compte);
         printf("Entrer votre numero telephone:\t");
