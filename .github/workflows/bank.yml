@@ -17,10 +17,6 @@ jobs:
       run: sudo apt-get install git
     - name: Install gcc
       run: sudo apt-get install gcc
-    - name: Compiling and run the code
-      run: |
-        gcc main.c -o main
-        ./main
     - name: Config Git
       env:
         ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -31,3 +27,16 @@ jobs:
         git remote add web https://"AJulianah":$ACCES_TOKEN@github.com/AJulianah/web_api.git
         git pull web api_developpement
         ls
+  automerge:
+    runs-on: ubuntu-latest
+    needs: [ build ]
+    steps:
+      - uses: reitermarkus/automerge@v2
+        with:
+            token: ${{ secrets.GITHUB_TOKEN }}
+            merge-method: rebase
+            do-not-merge-labels: never-merge
+            required-labels: automerge
+            pull-request: ${{ github.event.inputs.pull-request }}
+            dry-run: true
+    
