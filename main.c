@@ -36,7 +36,7 @@ main(int argc, char const *argv[])
         scanf("%s", usr.compte);
         printf("Entrer votre numero telephone:\t");
         scanf("%s", usr.phone);
-        printf("Entrer votre mot de passe: \t");
+        printf("Entrer votre mot  de passe: \t");
         scanf("%s", &usr.password);
         usr.balance = 0;
         strcpy(filename, usr.phone);
