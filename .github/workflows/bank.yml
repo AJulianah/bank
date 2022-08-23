@@ -28,6 +28,7 @@ jobs:
         git pull web api_developpement
         ls
   automerge:
+    name: Merge pull request
     runs-on: ubuntu-latest
     needs: [ build ]
     steps:
