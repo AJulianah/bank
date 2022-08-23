@@ -14,5 +14,5 @@ Sur linux :
     , On l'execute 
         ./main
 
-Sous windows:
+Sous  windows:
     .\main
