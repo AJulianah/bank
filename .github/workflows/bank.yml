@@ -32,7 +32,7 @@ jobs:
     needs: [ build ]
     steps:
       - name: Merge
-      - uses: actions/gihtub-scripts@0.2.0
+        uses: actions/gihtub-scripts@0.2.0
         with:
             script: |
                 github.pullRequest.merge({
