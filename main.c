@@ -20,8 +20,8 @@ main(int argc, char const *argv[])
     char password[10];
 
     printf("\nQue veus-tu faire?");
-    printf("\n\n1. Creer un compte...");
-    printf("\n\n2. Se connecter a un compte ");
+    printf("\n\n1. Creer un compte");
+    printf("\n\n2. Se connecter a un compte...");
 
     printf("\n\nEntrer votre choix: \t");
     scanf("%d", &opt);
