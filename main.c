@@ -10,6 +10,7 @@ struct utilisateur
     float balance;
 }
 
+
 main(int argc, char const *argv[])
 {
     struct utilisateur usr;
